@@ -1,24 +1,17 @@
-import logo from './logo.svg';
+import { Toaster } from 'sonner';
 import './App.css';
-
+import GameCanvas from './Components/GameCanvas';
+import GlobalLoading from './Components/GlobalLoading/GlobalLoading';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalLoading />
+      <Toaster />
+      <div className="w-full h-screen flex justify-center items-center bg-green-800">
+        <GameCanvas />
+      </div>
+      {/* <Containers /> */}
+    </>
   );
 }
 
